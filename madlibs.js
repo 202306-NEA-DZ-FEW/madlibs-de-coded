@@ -57,9 +57,6 @@ function parseStory(rawStory) {
  */
 
 
-
-
-
 getRawStory()
   .then(parseStory)
   .then((processedStory) => {
@@ -88,8 +85,7 @@ getRawStory()
       span.textContent = text ? text + " " : "___ "; // Display underscores if text is empty
       return span;
     }
-    
-    
+  
     // generate the madlibs
     function generateMadLibs(array) {
       array.forEach((word, index) => {
