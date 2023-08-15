@@ -73,7 +73,8 @@ getRawStory()
     function createInput(index, defaultValue) {
       const input = document.createElement("input");
       input.setAttribute("data-index", index);
-      input.value = defaultValue || "";
+      input.placeholder = defaultValue || "___"
+      // input.value = "";
       input.addEventListener("input", updatePreview);
       return input;
     }
