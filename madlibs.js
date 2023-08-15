@@ -63,7 +63,7 @@ function createInput(index, defaultValue) {
   return input;
 }
 //This is a comment
-
+// this is comment 2
 // function that creates empty space
 function createSpan(text) {
   const span = document.createElement("span");
