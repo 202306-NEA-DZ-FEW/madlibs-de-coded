@@ -85,6 +85,9 @@ function generateMadLibs(array) {
   });
 }
 
+generateMadLibs(temp);
+
+
 // function to update the preview
 function updatePreview() {
   while (madLibsPreview.firstChild) {
@@ -104,7 +107,6 @@ function updatePreview() {
   });
 }
 
-generateMadLibs(temp);
 
 
 
