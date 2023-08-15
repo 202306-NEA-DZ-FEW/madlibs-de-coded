@@ -45,7 +45,7 @@ const temp = [
   { word: "store"},
   { word: "," },
 ];
-//Sid is sick
+
 
 // we get the components from the html
 const madLibsEdit = document.querySelector(".madLibsEdit");
