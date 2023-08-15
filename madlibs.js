@@ -62,6 +62,7 @@ function createInput(index, defaultValue) {
   input.addEventListener("input", updatePreview);
   return input;
 }
+//This is a comment
 
 // function that creates empty space
 function createSpan(text) {
