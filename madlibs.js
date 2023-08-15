@@ -27,9 +27,28 @@
  * Please go through this lesson: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/
  */
 function parseStory(rawStory) {
-  // Your code here.
-  return {}; // This line is currently wrong :)
+  console.log(rawStory);
+  // const random = rawStory.replaceAll(",", " ,").replaceAll(".", " .").split(" ");
+  // console.log (random);
+  
+  const parsedStory = rawStory.match(/[a-zA-Z]+\[v\]|[a-zA-Z]+\[n\]|[a-zA-Z]+\[a\]|[a-zA-Z]+|[,\.]/g);
+  console.log(parsedStory);
+
+  const parsedObjectsStory = parsedStory.map((element) => {
+    if (element.endsWith("[n]") === true) {
+      return {word:element.slice(0, -3) , pos: "noun"};
+    } else if (element.endsWith("[v]") === true) {
+      return {word:element.slice(0, -3) , pos: "verb"};
+    } else if (element.endsWith("[a]") === true) {
+      return {word:element.slice(0, -3) , pos: "adjective"};
+    } else {
+      return {word:element};
+    }
+
+  });
+  console.log(parsedObjectsStory);
 }
+
 
 /**
  * All your other JavaScript code goes here, inside the function. Don't worry about
