@@ -37,6 +37,7 @@ getRawStory()
       const input = document.createElement("input");
       input.setAttribute("data-index", index);
       input.placeholder = defaultValue || "___";
+      input.maxLength = 20;
       // input.value = "";
       input.addEventListener("input", () => updatePreview(processedStory));
       return input;
@@ -56,7 +57,7 @@ getRawStory()
           const input = createInput(index, word.pos);
           madLibsEdit.appendChild(input);
         } else {
-          // text.push(word.word);
+         // text.push(word.word);
           const span = createSpan(word.word);
           madLibsEdit.appendChild(span);
         }
