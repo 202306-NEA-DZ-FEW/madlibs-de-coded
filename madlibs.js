@@ -37,6 +37,7 @@ getRawStory()
       const input = document.createElement("input");
       input.setAttribute("data-index", index);
       input.placeholder = defaultValue || "___";
+      input.maxLength = 20;
       // input.value = "";
       input.addEventListener("input", () => updatePreview(processedStory));
       return input;
@@ -45,7 +46,7 @@ getRawStory()
     // function that creates empty space
     function createSpan(text) {
       const span = document.createElement("span");
-      span.textContent = text ? text + " " : "___ "; // Display underscores if text is empty
+      span.textContent = text ?  text+" "   : "___ "; // Display underscores if text is empty
       return span;
     }
 
