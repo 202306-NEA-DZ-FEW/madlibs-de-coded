@@ -30,7 +30,7 @@ getRawStory()
     const madLibsPreview = document.querySelector(".madLibsPreview");
 
     // create
-    const text = [];
+    // const text = [];
 
     // function that creates input field
     function createInput(index, defaultValue) {
@@ -56,7 +56,7 @@ getRawStory()
           const input = createInput(index, word.pos);
           madLibsEdit.appendChild(input);
         } else {
-          text.push(word.word);
+         // text.push(word.word);
           const span = createSpan(word.word);
           madLibsEdit.appendChild(span);
         }
