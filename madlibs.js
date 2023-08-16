@@ -30,7 +30,7 @@ getRawStory()
     const madLibsPreview = document.querySelector(".madLibsPreview");
 
     // create
-    const text = [];
+    // const text = [];
 
     // function that creates input field
     function createInput(index, defaultValue) {
@@ -45,7 +45,7 @@ getRawStory()
     // function that creates empty space
     function createSpan(text) {
       const span = document.createElement("span");
-      span.textContent = text ? text + " " : "___ "; // Display underscores if text is empty
+      span.textContent = text ?  text+" "   : "___ "; // Display underscores if text is empty
       return span;
     }
 
@@ -56,7 +56,7 @@ getRawStory()
           const input = createInput(index, word.pos);
           madLibsEdit.appendChild(input);
         } else {
-          text.push(word.word);
+          // text.push(word.word);
           const span = createSpan(word.word);
           madLibsEdit.appendChild(span);
         }
