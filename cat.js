@@ -27,8 +27,8 @@ rightEye.src = "/eye.png"
 rightEye.style.position = "absolute";
 
 
-const initialEyesLeft = initialLeft - 3.5; 
-const initialEyesTop = initialTop - 3.5; 
+const initialEyesLeft = initialLeft -4.5; 
+const initialEyesTop = initialTop - 2.5; 
 
 leftEye.style.left = `${initialEyesLeft}vw`; 
 leftEye.style.top = `${initialEyesTop}vh`; 
@@ -36,8 +36,8 @@ leftEye.style.top = `${initialEyesTop}vh`;
 rightEye.style.left = `${initialEyesLeft + 4}vw`; 
 rightEye.style.top = leftEye.style.top
 
-const eyesWidth = 5; 
-const eyesHeight = 6.4; 
+const eyesWidth = 6; 
+const eyesHeight = 4.4; 
 
 leftEye.style.width = `${eyesWidth}vw`;
 leftEye.style.height = `${eyesHeight}vh`;
@@ -58,12 +58,12 @@ document.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         cat.style.top = `${-20}vh`;
         leftEye.style.top = `${-20 - 3.5}vh`;
-        rightEye.style.top = `${-20 - 3.5}vh`;
-
+        rightEye.style.top = `${-20 - 2.5}vh`;
+        
         setTimeout(() => {  
             cat.style.top = `${-5}vh`;
             leftEye.style.top = `${-5 - 3.5}vh`;
-            rightEye.style.top = `${-5 - 3.5}vh`;
+            rightEye.style.top = `${-5 - 2.5}vh`;
                 }, 1000);
     }
 });
@@ -93,7 +93,7 @@ document.addEventListener("mousemove", (event) => {
     const catX = rect.left + rect.width / 2;
     const catY = rect.top + rect.height / 2;
     const minAngle = 70; 
-    const maxAngle = 120;  
+    const maxAngle = 95;  
 
     const angleDeg = angle(mouseX, mouseY, catX, catY, minAngle, maxAngle);
     console.log(angleDeg)
@@ -112,12 +112,12 @@ document.addEventListener("mousemove", (event) => {
     
 //         cat.style.top = `${-20}vh`;
 //         leftEye.style.top = `${-20 - 3.5}vh`;
-//         rightEye.style.top = `${-20 - 3.5}vh`;
+//         rightEye.style.top = `${-20 - 2.5}vh`;
 
 //         setTimeout(() => {  
 //             cat.style.top = `${-5}vh`;
 //             leftEye.style.top = `${-5 - 3.5}vh`;
-//             rightEye.style.top = `${-5 - 3.5}vh`;
+//             rightEye.style.top = `${-5 - 2.5}vh`;
 //                 }, 1000);
 //     }
 // );
