@@ -290,7 +290,6 @@ input:focus {
       bottom: var(--distance, 70vh);
   }
 }
-
 :root {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
