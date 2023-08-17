@@ -27,17 +27,17 @@ rightEye.src = "/eye1.png"
 rightEye.style.position = "absolute";
 
 
-const initialEyesLeft = initialLeft -3.5; 
+const initialEyesLeft = initialLeft - 3.0; 
 const initialEyesTop = initialTop - 2.5; 
 
 leftEye.style.left = `${initialEyesLeft}vw`; 
 leftEye.style.top = `${initialEyesTop}vh`; 
 
 rightEye.style.left = `${initialEyesLeft + 4}vw`; 
-rightEye.style.top = leftEye.style.top
+rightEye.style.top = `${initialEyesTop}vh`; 
 
-const eyesWidth = 4; 
-const eyesHeight = 5.4; 
+const eyesWidth = 3.5; 
+const eyesHeight = 6; 
 
 leftEye.style.width = `${eyesWidth}vw`;
 leftEye.style.height = `${eyesHeight}vh`;
@@ -107,16 +107,16 @@ document.addEventListener("mousemove", (event) => {
 
 
 
-document.addEventListener("mouseover", () => {
+// document.addEventListener("mouseover", () => {
     
-        cat.style.top = `${-20}vh`;
-        leftEye.style.top = `${-20 - 3.5}vh`;
-        rightEye.style.top = `${-20 - 2.5}vh`;
+//         cat.style.top = `${-20}vh`;
+//         leftEye.style.top = `${-20 - 3.5}vh`;
+//         rightEye.style.top = `${-20 - 2.5}vh`;
 
-        setTimeout(() => {  
-            cat.style.top = `${-5}vh`;
-            leftEye.style.top = `${-5 - 3.5}vh`;
-            rightEye.style.top = `${-5 - 2.5}vh`;
-                }, 1000);
-    }
-);
+//         setTimeout(() => {  
+//             cat.style.top = `${-5}vh`;
+//             leftEye.style.top = `${-5 - 3.5}vh`;
+//             rightEye.style.top = `${-5 - 2.5}vh`;
+//                 }, 1000);
+//     }
+// );

@@ -1,5 +1,7 @@
 * {
   font-family: 'Seuss';
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -10,7 +12,7 @@ body {
 }
 
 .madLibsEdit {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -65,8 +67,3 @@ input:focus {
   font-display: swap;
 }
 
-.your-style {
-  font-family: 'Seuss';
-  font-weight: normal;
-  font-style: normal;
-}
