@@ -1,26 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>De:Coded</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="preload" href="Seuss.woff2" as="font" type="font/woff2" crossorigin>
-  </head>
-  <body>
-     <header>
-      <h2>Bababooey</h2> 
-    </header>
-        <div class='madLibsEdit'>
-        </div>
-        <div class="preview">
-        <div class='madLibsPreview'>
-        </div>
-      </div>
-    <!-- </section> -->
-    <script src="do-not-touch.js"></script>
-    <script src="madlibs.js"></script>
-    <script src="cat.js"></script>
 
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>De:Coded</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preload" href="Seuss.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+  <header>
+    <h2>Bababooey</h2>
+  </header>
+  <div class='madLibsEdit'>
+  </div>
+  <div class="preview">
+    <div class='madLibsPreview'>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="bubbles">
+      <script>
+        for (let i = 0; i < 128; i++) {
+          let bubble = document.createElement("div");
+          bubble.classList.add("bubble");
+          let size = 2 + Math.random() * 4;
+          let distance = 6 + Math.random() * 4;
+          let position = -5 + Math.random() * 110;
+          let time = 2 + Math.random() * 2;
+          let delay = -1 * (2 + Math.random() * 2);
+          bubble.style.setProperty("--size", size + "rem");
+          bubble.style.setProperty("--distance", distance + "rem");
+          bubble.style.setProperty("--position", position + "%");
+          bubble.style.setProperty("--time", time + "s");
+          bubble.style.setProperty("--delay", delay + "s");
+          document.querySelector(".bubbles").appendChild(bubble);
+        }
+      </script>
+    </div>
+  </div>
+  <div class="content">
+    <div>
+      <div>
+        <b>Crew</b>
+        <a href="#">Ahmed</a>
+        <a href="#">Sidali</a>
+        <a href="#">Oussama</a>
+        <a href="#">Bouchra</a>
+        <a href="#">Hadil</a>
+      </div>
+      
+      </div>
+    </div>
+   
+  </div>
+  </div>
+  </div>
+ 
+
+  <!-- </section> -->
+
+
+  <script src="do-not-touch.js"></script>
+  <script src="madlibs.js"></script>
+  <script src="cat.js"></script>
+
+</body>
+
 </html>
