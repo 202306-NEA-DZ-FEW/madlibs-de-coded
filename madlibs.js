@@ -2,22 +2,20 @@ function parseStory(rawStory) {
   console.log(rawStory);
   // const random = rawStory.replaceAll(",", " ,").replaceAll(".", " .").split(" ");
   // console.log (random);
-  
-  const parsedStory = rawStory.match(/[a-zA-Z]+\[v\]|[a-zA-Z]+\[n\]|[a-zA-Z]+\[a\]|[a-zA-Z]+|[,\.]/g);
-  console.log(parsedStory);
+
+  const parsedStory = rawStory.match(
+    /[a-zA-Z]+\[v\]|[a-zA-Z]+\[n\]|[a-zA-Z]+\[a\]|[a-zA-Z]+|[,\.]/g
+  );
+  // console.log(parsedStory);
 
   const parsedObjectsStory = parsedStory.map((element) => {
     if (element.endsWith("[n]") === true) {
       return { word: element.slice(0, -3), pos: "noun" };
-      return { word: element.slice(0, -3), pos: "noun" };
     } else if (element.endsWith("[v]") === true) {
-      return { word: element.slice(0, -3), pos: "verb" };
       return { word: element.slice(0, -3), pos: "verb" };
     } else if (element.endsWith("[a]") === true) {
       return { word: element.slice(0, -3), pos: "adjective" };
-      return { word: element.slice(0, -3), pos: "adjective" };
     } else {
-      return { word: element };
       return { word: element };
     }
   });
@@ -30,27 +28,19 @@ getRawStory()
     // we get the components from the html
     const madLibsEdit = document.querySelector(".madLibsEdit");
     const madLibsPreview = document.querySelector(".madLibsPreview");
-    
-    // create 
-    const text = [];
-    
+
+  
     // function that creates input field
     function createInput(index, defaultValue) {
       const input = document.createElement("input");
-      const inputContainer = document.createElement("div")
-      input.classList.add("input")
-      inputContainer.classList.add("input-container")
-      inputContainer.appendChild(input)
       input.setAttribute("data-index", index);
-      input.placeholder = defaultValue || "___";
-      input.maxLength = 20;
+
       input.placeholder = defaultValue || "___";
       input.maxLength = 20;
       // input.value = "";
       input.addEventListener("input", () => updatePreview(processedStory));
-      return inputContainer;
+      return input;
     }
-
 
     // function that creates empty space
     function createSpan(text) {
@@ -92,7 +82,6 @@ getRawStory()
         }
       });
     }
-  })
 
     generateMadLibs(processedStory);
     updatePreview(processedStory);
