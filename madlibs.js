@@ -86,4 +86,20 @@ getRawStory()
 
     generateMadLibs(processedStory);
     updatePreview(processedStory);
+
+    const inputs = madLibsEdit.querySelectorAll("input");
+
+    madLibsEdit.addEventListener("keypress" ,function (e) {
+      if (e.key === 'Enter') {
+        const currentIndex = Array.from(inputs).indexOf(e.target);
+        console.log(currentIndex)
+        const nextIndex = currentIndex + 1;
+        const nextInput = inputs[nextIndex];
+        console.log(nextInput)
+        if (nextInput) {
+      
+          nextInput.focus(); // Move focus to the next input field
+        }
+
+      }} )
   });
