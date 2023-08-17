@@ -1,9 +1,11 @@
 
 * {
   font-family: 'Seuss';
+  
 }
 
 html, body {
+  
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -27,6 +29,7 @@ body {
 	-o-overflow-scrolling: touch;
 	overflow-scrolling: touch;
 	-ms-overflow-style: ms-autohiding-scrollbar;
+
 }
 #page-wrap {
 	position: relative;
@@ -41,6 +44,7 @@ body {
 }
 #inner-wrap {
 	position: absolute;
+  z-index: -1;
 	top: 3rem;
 	left: 0;
 	right: 0;
@@ -51,17 +55,7 @@ body {
 	min-height: 322px;
 	overflow: visible;
 }
-.logo {
-	position: absolute;
-	z-index: -1;
-	top: 3rem;
-	left: 2rem;
-	display: block;
-	width: 9vmax;
-	height: 9vmax;
-	min-width: 50px;
-	min-height: 50px;
-}
+
 .waves {
 	position: absolute;
 	top: 0;
@@ -86,13 +80,13 @@ body {
 	margin: auto;
 }
 
-img, svg {
+/* img, svg {
 	display: block;
 	overflow: visible;
 	pointer-events: none;
-}
+} */
 
-.group:before,
+/* .group:before,
 .group:after {
   content: "";
   display: table;
@@ -100,11 +94,11 @@ img, svg {
 }
 .group {
   zoom: 1;
-}
+} */
 
 
 
-.credits {
+/* .credits {
 	position: relative;
 	z-index: -1;
 	font-size: 130%;
@@ -137,14 +131,16 @@ img, svg {
 	width: 1.6em;
 	height: 1.6em;
 	margin: 0 0.5em 0 0;
-}
+} */
 
 
 body {
   overflow-x: hidden;
 
- /* background-color: #330033;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='9.4'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='9'/%3E%3Ccircle cx='539' cy='269' r='9'/%3E%3Ccircle cx='603' cy='493' r='9'/%3E%3Ccircle cx='731' cy='737' r='9'/%3E%3Ccircle cx='520' cy='660' r='9'/%3E%3Ccircle cx='309' cy='538' r='9'/%3E%3Ccircle cx='295' cy='764' r='9'/%3E%3Ccircle cx='40' cy='599' r='9'/%3E%3Ccircle cx='102' cy='382' r='9'/%3E%3Ccircle cx='127' cy='80' r='9'/%3E%3Ccircle cx='370' cy='105' r='9'/%3E%3Ccircle cx='578' cy='42' r='9'/%3E%3Ccircle cx='237' cy='261' r='9'/%3E%3Ccircle cx='390' cy='382' r='9'/%3E%3C/g%3E%3C/svg%3E");  */
+ background-color: #B41FB6;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f1f61a' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%233714c3' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23e7c63f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%234112a4' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23e49362' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%235f0f81' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23e2648a' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23830b5e' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23d932ad' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23a0083a' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23d600d3' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23bb0519' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
   max-height: 100vh;
   align-items: center;
   /* line-height: 1.5em;
@@ -167,7 +163,7 @@ body {
   margin-top: 18%;
   min-width: 40%;
   width: 300px;
-  border: 3px solid;
+  /* border: 3px solid; */
   background-color: brown;
   height: auto;
   padding: 1%;
@@ -182,7 +178,7 @@ body {
   width: auto;
   margin: 5%;
   height: auto;
-  border: 3px solid;
+  /* border: 3px solid; */
   padding: 1%;
   background-color: blueviolet;
   transition: all 0.5s;
@@ -318,7 +314,7 @@ input:focus {
   display: flex;
   position: sticky;
   z-index: -1;
-  --footer-background: #e561cd;
+  --footer-background: rgba(255, 230, 0, 0.31);
 }
 
 .bubbles {
@@ -341,14 +337,14 @@ input:focus {
 }
 
 .content {
-  margin-right: 100rem;
+  text-align: center;
   z-index: 2;
-  width:120vw;
+  /* width:120vw; */
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 4rem;
   padding: 2rem;
-  background-color: #e561cd;
+  background-color: rgba(255, 230, 0, 0);
 }
 
 .content a,
