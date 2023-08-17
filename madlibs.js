@@ -83,8 +83,37 @@ getRawStory()
         }
       });
     }
+
+    // function handleEnterKey(event) {
+    //   if (event.key === "Enter") {
+      
+    //     event.preventDefault(); // Prevent default Enter behavior
+    //     const currentIndex = Array.from(madLibsEdit.querySelectorAll("input")).indexOf(event.target);
+    //     const nextInput = madLibsEdit.querySelector(`input[data-index="${currentIndex + 1}"]`);
+    //     if (nextInput) {
+          
+    //       nextInput.focus(); // Move focus to the next input field
+    //     }
+    //   }
+    // }
   
-    
+ 
     generateMadLibs(processedStory);
     updatePreview(processedStory);
+
+    const inputs = madLibsEdit.querySelectorAll("input");
+
+    madLibsEdit.addEventListener("keypress" ,function (e) {
+      if (e.key === 'Enter') {
+        const currentIndex = Array.from(inputs).indexOf(e.target);
+        console.log(currentIndex)
+        const nextIndex = currentIndex + 1;
+        const nextInput = inputs[nextIndex];
+        console.log(nextInput)
+        if (nextInput) {
+      
+          nextInput.focus(); // Move focus to the next input field
+        }
+
+      }} )
   });
