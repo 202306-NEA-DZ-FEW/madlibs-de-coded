@@ -82,7 +82,8 @@ getRawStory()
         }
       });
     }
-
+  
+    
     generateMadLibs(processedStory);
     updatePreview(processedStory);
   });
