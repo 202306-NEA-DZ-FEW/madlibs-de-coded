@@ -17,7 +17,6 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  display: block;
   font-family: 'Seuss';
   margin:0 ;
 
@@ -139,6 +138,11 @@ input {
 input:focus {
   box-shadow: none;
   transition: all 0.5s;
+}
+
+input.has-text {
+  background-color: #0B2447;
+  color: white;
 }
 
 

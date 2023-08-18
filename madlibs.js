@@ -25,10 +25,7 @@ function parseStory(rawStory) {
 
 const madLibsEdit = document.querySelector(".madLibsEdit");
 const madLibsPreview = document.querySelector(".madLibsPreview");
-const colors = [
-  "red", "orange", "yellow", "green", "blue", "purple",
-  "pink", "turquoise", "gold", "silver"
-];
+
 
 getRawStory()
   .then(parseStory)
@@ -43,7 +40,9 @@ getRawStory()
       input.placeholder = defaultValue || "___";
       input.maxLength = 20;
       // input.value = "";
-      input.addEventListener("input", () => updatePreview(processedStory));
+      input.addEventListener("input", () => {
+        input.value.trim() !== "" ? input.classList.add("has-text") : input.classList.remove("has-text") 
+        updatePreview(processedStory)});
       return input;
     }
 
