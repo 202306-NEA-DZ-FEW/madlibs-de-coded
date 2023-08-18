@@ -97,12 +97,13 @@ getRawStory()
       if (e.key === 'Enter') {
         const currentIndex = Array.from(inputs).indexOf(e.target);
         console.log(currentIndex)
-        const nextIndex = currentIndex + 1;
+        let nextIndex = 0
+        currentIndex == Array.from(inputs).length - 1 ? nextIndex = 0 : nextIndex = currentIndex + 1;
         const nextInput = inputs[nextIndex];
         console.log(nextInput)
         if (nextInput) {
-      
           nextInput.focus(); // Move focus to the next input field
+      
         }
 
       }} )
