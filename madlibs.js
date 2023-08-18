@@ -92,7 +92,17 @@ getRawStory()
     updatePreview(processedStory);
 
     const inputs = madLibsEdit.querySelectorAll("input");
-
+    inputs.forEach((input) => {
+      input.addEventListener("click", () => {
+      
+        
+        document.documentElement.scrollTo({
+          top: document.documentElement.scrollHeight * 0.25,
+          behavior: "smooth"
+        });
+      });
+    });
+        
     madLibsEdit.addEventListener("keypress" ,function (e) {
       if (e.key === 'Enter') {
         const currentIndex = Array.from(inputs).indexOf(e.target);
