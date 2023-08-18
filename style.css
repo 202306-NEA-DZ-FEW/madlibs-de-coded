@@ -155,11 +155,11 @@ input.has-text {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   cursor: default;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
+  -ms-user-select: none; */
   -o-user-select: none;
-  user-select: none;
+  /* user-select: none; */
 }
 
 :before,
