@@ -19,7 +19,6 @@ body {
   left: 0;
   font-family: 'Seuss';
   margin:0 ;
-
 }
 
 
@@ -62,7 +61,7 @@ body {
 }
 
 .text {
-  color: white;
+  color: black;
   position: absolute;
   top: 0;
   left: 0;
@@ -80,8 +79,8 @@ body {
 
 body {
   overflow-x: hidden;
-  background-color: #B41FB6;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f1f61a' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%233714c3' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23e7c63f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%234112a4' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23e49362' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%235f0f81' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23e2648a' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23830b5e' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23d932ad' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23a0083a' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23d600d3' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23bb0519' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+ 
+  background-image: url("src/background.jpg");
   background-attachment: fixed;
   background-size: cover;
   max-height: 100vh;
@@ -93,7 +92,7 @@ body {
 
 
 .madLibsEdit {
-
+  border-radius: 1em;
   margin-left: 7%;
   margin-top: 18%;
   min-width: 40%;
@@ -108,7 +107,10 @@ body {
 }
 
 
+
+
 .madLibsPreview {
+  border-radius: 1em;
   width: auto;
   margin: 2%;
   height: auto;
@@ -281,24 +283,3 @@ input.has-text {
 }
 
 
-.title-animation {
-  animation-name: titleColors;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes titleColors {
-  0% {
-    color: white;
-  }
-
-  33.33% {
-    color: #23830b5e;
-  }
-
-  66.66% {
-    color: #23bb0519;
-  }
-
- 
-}
