@@ -22,14 +22,15 @@ function parseStory(rawStory) {
   return parsedObjectsStory;
 }
 
+
+const madLibsEdit = document.querySelector(".madLibsEdit");
+const madLibsPreview = document.querySelector(".madLibsPreview");
+
 getRawStory()
   .then(parseStory)
   .then((processedStory) => {
     // we get the components from the html
-    const madLibsEdit = document.querySelector(".madLibsEdit");
-    const madLibsPreview = document.querySelector(".madLibsPreview");
 
-  
     // function that creates input field
     function createInput(index, defaultValue) {
       const input = document.createElement("input");
@@ -45,8 +46,11 @@ getRawStory()
     // function that creates empty space
     function createSpan(text) {
       const span = document.createElement("span");
+
       span.textContent = text ?  text+" "   : "___ "; 
     // Display underscores if text is empty
+      span.textContent = text ?  text+" "   : "___ "; // Display underscores if text is empty
+
       return span;
     }
 
@@ -84,20 +88,6 @@ getRawStory()
       });
     }
 
-    // function handleEnterKey(event) {
-    //   if (event.key === "Enter") {
-      
-    //     event.preventDefault(); // Prevent default Enter behavior
-    //     const currentIndex = Array.from(madLibsEdit.querySelectorAll("input")).indexOf(event.target);
-    //     const nextInput = madLibsEdit.querySelector(`input[data-index="${currentIndex + 1}"]`);
-    //     if (nextInput) {
-          
-    //       nextInput.focus(); // Move focus to the next input field
-    //     }
-    //   }
-    // }
-  
- 
     generateMadLibs(processedStory);
     updatePreview(processedStory);
 
@@ -117,3 +107,4 @@ getRawStory()
 
       }} )
   });
+
