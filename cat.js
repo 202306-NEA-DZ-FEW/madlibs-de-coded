@@ -107,7 +107,7 @@ document.addEventListener("mousemove", (event) => {
 
 
 
-document.addEventListener("mouseover", () => {
+previewDiv.addEventListener("mouseover", () => {
     
         cat.style.top = `${-20}vh`;
         leftEye.style.top = `${-20 - 3.5}vh`;
