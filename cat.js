@@ -76,11 +76,11 @@ function angle(cx, cy, ex, ey, minAngle, maxAngle) {
     // Apply angle limits
     if (minAngle !== undefined && deg < minAngle) {
         deg = minAngle;
-        rad = deg * Math.PI / 180;
+        // rad = deg * Math.PI / 180;
     }
     if (maxAngle !== undefined && deg > maxAngle) {
         deg = maxAngle;
-        rad = deg * Math.PI / 180;
+        // rad = deg * Math.PI / 180;
     }
 
     return deg;
@@ -107,16 +107,16 @@ document.addEventListener("mousemove", (event) => {
 
 
 
-// document.addEventListener("mouseover", () => {
+document.addEventListener("mouseover", () => {
     
-//         cat.style.top = `${-20}vh`;
-//         leftEye.style.top = `${-20 - 3.5}vh`;
-//         rightEye.style.top = `${-20 - 2.5}vh`;
+        cat.style.top = `${-20}vh`;
+        leftEye.style.top = `${-20 - 3.5}vh`;
+        rightEye.style.top = `${-20 - 2.5}vh`;
 
-//         setTimeout(() => {  
-//             cat.style.top = `${-5}vh`;
-//             leftEye.style.top = `${-5 - 3.5}vh`;
-//             rightEye.style.top = `${-5 - 2.5}vh`;
-//                 }, 1000);
-//     }
-// );
+        setTimeout(() => {  
+            cat.style.top = `${-5}vh`;
+            leftEye.style.top = `${-5 - 3.5}vh`;
+            rightEye.style.top = `${-5 - 2.5}vh`;
+                }, 1000);
+    }
+);
