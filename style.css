@@ -37,7 +37,7 @@ body {
 #inner-wrap {
   position: absolute;
   z-index: -1;
-  top: 3rem;
+  top: 1rem;
   left: 0;
   right: 0;
   bottom: 3rem;
@@ -92,7 +92,8 @@ body {
 
 
 .madLibsEdit {
-  border-radius: 1em;
+  background-image: url("src/madlibsedit bg.png");
+    border-radius: 1em;
   margin-left: 7%;
   margin-top: 18%;
   min-width: 40%;
@@ -100,6 +101,7 @@ body {
   background-color: #23e7c6a2;
   height: auto;
   padding: 1%;
+  
   transition: all 0.5s;
   font-size: 1.5em;
   line-height: 1.5em;
