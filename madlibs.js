@@ -26,6 +26,7 @@ function parseStory(rawStory) {
 const madLibsEdit = document.querySelector(".madLibsEdit");
 const madLibsPreview = document.querySelector(".madLibsPreview");
 
+
 getRawStory()
   .then(parseStory)
   .then((processedStory) => {
@@ -39,7 +40,9 @@ getRawStory()
       input.placeholder = defaultValue || "___";
       input.maxLength = 20;
       // input.value = "";
-      input.addEventListener("input", () => updatePreview(processedStory));
+      input.addEventListener("input", () => {
+        input.value.trim() !== "" ? input.classList.add("has-text") : input.classList.remove("has-text") 
+        updatePreview(processedStory)});
       return input;
     }
 
@@ -53,7 +56,19 @@ getRawStory()
 
       return span;
     }
-
+    //create colored span
+    function createColoredSpan(text) {
+      
+      const span = document.createElement("span");
+      for (let i = 0; i < text.length; i++) {
+        const letter = text[i];
+        const letterSpan = document.createElement("span");
+        letterSpan.textContent = letter;
+        letterSpan.style.color = colors[i % colors.length];
+        span.appendChild(letterSpan);
+      }
+      return span;
+    }
     // generate the madlibs
     function generateMadLibs(array) {
       array.forEach((word, index) => {
@@ -80,9 +95,14 @@ getRawStory()
             `input[data-index="${array.indexOf(word)}"]`
           );
           const span = createSpan(input.value);
+          span.style.color = "white"
+          span.classList.add('preview-animation')
           madLibsPreview.appendChild(span);
         } else {
           const span = createSpan(word.word);
+         
+          
+          
           madLibsPreview.appendChild(span);
         }
       });
@@ -97,7 +117,7 @@ getRawStory()
       
         
         document.documentElement.scrollTo({
-          top: document.documentElement.scrollHeight * 0.25,
+          top: document.documentElement.scrollHeight * 0.30,
           behavior: "smooth"
         });
       });
