@@ -80,59 +80,6 @@ body {
 	margin: auto;
 }
 
-/* img, svg {
-	display: block;
-	overflow: visible;
-	pointer-events: none;
-} */
-
-/* .group:before,
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.group {
-  zoom: 1;
-} */
-
-
-
-/* .credits {
-	position: relative;
-	z-index: -1;
-	font-size: 130%;
-	text-align: center;
-	width: 100%;
-	padding: 2rem 0;
-}
-
-.credits a {
-	display: inline-block;
-	color: #df1888;
-	font-family: Arial, sans-serif;
-	line-height: 1.5em;
-	text-decoration: none !important;
-	white-space: nowrap;
-	margin: 0 1.2em;
-	padding: 0.6em 0;
-	transition: 150ms;
-}
-
-.credits a:hover {
-	color: #2d71b9;
-	cursor: pointer;
-}
-
-.credits-logo {
-	fill: currentColor;
-	display: inline-block;
-	vertical-align: bottom;
-	width: 1.6em;
-	height: 1.6em;
-	margin: 0 0.5em 0 0;
-} */
-
 
 body {
   overflow-x: hidden;
@@ -219,73 +166,6 @@ input:focus {
 }
 
 
-.footer {
-  
-  display: flex;
-  position: sticky;
-  z-index: -1;
-  --footer-background: #e561cd;
-}
-
-.bubbles {
-  position: absolute;
-  top: 5px;
-  left: 0;
-  right: 0;
-  height: 0.5rem;
-  
-}
-
-.bubble {
-  position: absolute;
-  left: var(--position, 50%);
-  background: var(--footer-background);
-  border-radius: 100%;
-  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
-  bubble-move var(--time, 4s) ease-out infinite var(--delay, 0s);
-  transform: translate(-50%, 100%);
-}
-
-.content {
-  margin-right: 100rem;
-  z-index: 2;
-  width:120vw;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-gap: 4rem;
-  padding: 2rem;
-  background-color: #e561cd;
-}
-
-.content a,
-.content p {
-  color: #F5F7FA;
-  text-decoration: none;
-}
-
-.content b {
-  color: white;
-}
-
-@keyframes bubble-size {
-  0%, 75% {
-      width: var(--size, 4rem);
-      height: var(--size, 4rem);
-  }
-  100% {
-      width: 0rem;
-      height: 0rem;
-  }
-}
-
-@keyframes bubble-move {
-  0% {
-      bottom: 1rem;
-  }
-  100% {
-      bottom: var(--distance, 70vh);
-  }
-}
 :root {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -338,23 +218,45 @@ input:focus {
 
 .content {
   text-align: center;
-  z-index: 2;
-  /* width:120vw; */
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 4rem;
-  padding: 2rem;
-  background-color: rgba(255, 230, 0, 0);
+  padding: 3rem;
+  background-color: rgba(255, 230, 0, 0.15);
 }
 
 .content a,
 .content p {
-  color: #F5F7FA;
   text-decoration: none;
+  font-size: 2em;
+}
+#Ahmed {
+  color: rgb(157, 8, 60);
+
+}
+
+#Sidali {
+color: yellow
+}
+
+#Oussama{
+color:blue;
+}
+
+#Bouchra{
+color:red
+}
+
+#Hadil {
+  color: pink;
 }
 
 .content b {
-  color: white;
+  color: black;
+  font-size: 1.6em;
+  
+
 }
 
 @keyframes bubble-size {
