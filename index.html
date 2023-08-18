@@ -19,23 +19,6 @@
       </div>
       <div class="footer">
         <div class="bubbles">
-          <script>
-            for (let i = 0; i < 128; i++) {
-              let bubble = document.createElement("div");
-              bubble.classList.add("bubble");
-              let size = 2 + Math.random() * 4;
-              let distance = 6 + Math.random() * 4;
-              let position = -5 + Math.random() * 110;
-              let time = 2 + Math.random() * 2;
-              let delay = -1 * (2 + Math.random() * 2);
-              bubble.style.setProperty("--size", size + "rem");
-              bubble.style.setProperty("--distance", distance + "rem");
-              bubble.style.setProperty("--position", position + "%");
-              bubble.style.setProperty("--time", time + "s");
-              bubble.style.setProperty("--delay", delay + "s");
-              document.querySelector(".bubbles").appendChild(bubble);
-            }
-          </script>
         </div>
       </div>
       <div class="content">
@@ -54,6 +37,7 @@
       <script src="do-not-touch.js"></script>
       <script src="madlibs.js"></script>
       <script src="cat.js"></script>
+      <script src="style.js"></script>
 
 </body>
 

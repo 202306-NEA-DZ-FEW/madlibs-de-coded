@@ -1,95 +1,98 @@
-
 * {
   font-family: 'Seuss';
-  
+
 }
 
-html, body {
-  
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-html {
-	overflow: hidden;
-}
+html,
 body {
-	margin: 0;
-	overflow: auto;
-	overflow-x: hidden;
-	overflow-y: scroll;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 
 
 }
+
 #page-wrap {
-	position: relative;
-	display: block;
-	clear: both;
-	background: none;
-	color: #000;
-	text-decoration: none;
-	padding: 3rem 0;
-	width: 100%;
-	height: 100%;
+  position: relative;
+  display: block;
+  clear: both;
+  background: none;
+  color: #000;
+  text-decoration: none;
+  padding: 3rem 0;
+  width: 100%;
+  height: 100%;
 }
+
 #inner-wrap {
-	position: absolute;
+  position: absolute;
   z-index: -1;
-	top: 3rem;
-	left: 0;
-	right: 0;
-	bottom: 3rem;
-	display: table;
-	width: 100%;
-	height: 100%;
-	min-height: 322px;
-	overflow: visible;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  bottom: 3rem;
+  display: table;
+  width: 100%;
+  height: 100%;
+  min-height: 322px;
+  overflow: visible;
 }
 
 .waves {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	display: block;
-	min-width: 100%;
-	min-height: 70%;
-	margin: auto 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  min-width: 100%;
+  min-height: 70%;
+  margin: auto 0;
 }
 
 .text {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	display: block;
-	width: 83%;
-	height: 100%;
-	margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 83%;
+  height: 100%;
+  margin: auto;
 }
 
 
 body {
   overflow-x: hidden;
 
- background-color: #B41FB6;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f1f61a' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%233714c3' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23e7c63f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%234112a4' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23e49362' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%235f0f81' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23e2648a' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23830b5e' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23d932ad' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23a0083a' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23d600d3' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23bb0519' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover;
+  background-color: #B41FB6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f1f61a' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%233714c3' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23e7c63f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%234112a4' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23e49362' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%235f0f81' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23e2648a' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23830b5e' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23d932ad' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23a0083a' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23d600d3' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23bb0519' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
   max-height: 100vh;
   align-items: center;
-  /* line-height: 1.5em;
-  word-spacing: 0.2em; */
   line-height: 1.5em;
   word-spacing: 0.2em;
 }
+
 .text {
   text-align: center;
   margin-top: 5%;
@@ -139,7 +142,7 @@ input {
   font-size: 20px;
   max-width: 14%;
   min-width: 10%;
-  opacity: 0.6 ;
+  opacity: 0.6;
   outline: none;
   box-shadow: 2px 2px 0px 0px #0B2447;
   transition: all 0.5s;
@@ -153,8 +156,8 @@ input:focus {
 
 @font-face {
   font-family: 'Seuss';
-  src: url('Seuss.woff2') format('woff2'),
-      url('Seuss.woff') format('woff');
+  src: url('src/Seuss.woff2') format('woff2'),
+    url('src/Seuss.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -162,30 +165,30 @@ input:focus {
 
 
 :root {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-	cursor: default;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 :before,
 :after {
-	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
-	-ms-box-sizing: inherit;
-	-o-box-sizing: inherit;
-	box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -ms-box-sizing: inherit;
+  -o-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .footer {
-  
+
   display: flex;
   position: sticky;
   z-index: -1;
@@ -198,7 +201,7 @@ input:focus {
   left: 0;
   right: 0;
   height: 0.5rem;
-  
+
 }
 
 .bubble {
@@ -207,7 +210,7 @@ input:focus {
   background: var(--footer-background);
   border-radius: 100%;
   animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
-  bubble-move var(--time, 4s) ease-out infinite var(--delay, 0s);
+    bubble-move var(--time, 4s) ease-out infinite var(--delay, 0s);
   transform: translate(-50%, 100%);
 }
 
@@ -226,21 +229,22 @@ input:focus {
   text-decoration: none;
   font-size: 2em;
 }
+
 #Ahmed {
   color: rgb(157, 8, 60);
 
 }
 
 #Sidali {
-color: yellow
+  color: yellow
 }
 
-#Oussama{
-color:blue;
+#Oussama {
+  color: blue;
 }
 
-#Bouchra{
-color:red
+#Bouchra {
+  color: red
 }
 
 #Hadil {
@@ -250,26 +254,30 @@ color:red
 .content b {
   color: black;
   font-size: 1.6em;
-  
+
 
 }
 
 @keyframes bubble-size {
-  0%, 75% {
-      width: var(--size, 4rem);
-      height: var(--size, 4rem);
+
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
   }
+
   100% {
-      width: 0rem;
-      height: 0rem;
+    width: 0rem;
+    height: 0rem;
   }
 }
 
 @keyframes bubble-move {
   0% {
-      bottom: 1rem;
+    bottom: 1rem;
   }
+
   100% {
-      bottom: var(--distance, 70vh);
+    bottom: var(--distance, 70vh);
   }
 }

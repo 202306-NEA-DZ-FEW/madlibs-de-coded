@@ -2,7 +2,7 @@ const previewDiv = document.querySelector('.preview');
 previewDiv.style.position = "relative";
 
 const cat = document.createElement("img");
-cat.src = "/cat.png";
+cat.src = "src/cat.png";
 
 cat.style.position = "absolute";
 
@@ -19,11 +19,11 @@ cat.style.height = "52vh";
 previewDiv.appendChild(cat);
 
 const leftEye  = document.createElement("img");
-leftEye.src = "/eye1.png"
+leftEye.src = "src/eye1.png"
 leftEye.style.position = "absolute";
 
 const rightEye  = document.createElement("img");
-rightEye.src = "/eye1.png"
+rightEye.src = "src/eye1.png"
 rightEye.style.position = "absolute";
 
 
