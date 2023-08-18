@@ -22,20 +22,20 @@ function parseStory(rawStory) {
   return parsedObjectsStory;
 }
 
+
+const madLibsEdit = document.querySelector(".madLibsEdit");
+const madLibsPreview = document.querySelector(".madLibsPreview");
+
 getRawStory()
   .then(parseStory)
   .then((processedStory) => {
     // we get the components from the html
-    const madLibsEdit = document.querySelector(".madLibsEdit");
-    const madLibsPreview = document.querySelector(".madLibsPreview");
-
-    // create
-    // const text = [];
 
     // function that creates input field
     function createInput(index, defaultValue) {
       const input = document.createElement("input");
       input.setAttribute("data-index", index);
+
       input.placeholder = defaultValue || "___";
       input.maxLength = 20;
       // input.value = "";
@@ -46,7 +46,11 @@ getRawStory()
     // function that creates empty space
     function createSpan(text) {
       const span = document.createElement("span");
+
+      span.textContent = text ?  text+" "   : "___ "; 
+    // Display underscores if text is empty
       span.textContent = text ?  text+" "   : "___ "; // Display underscores if text is empty
+
       return span;
     }
 
@@ -103,3 +107,4 @@ getRawStory()
 
       }} )
   });
+
