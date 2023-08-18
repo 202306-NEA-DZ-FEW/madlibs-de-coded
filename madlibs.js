@@ -1,12 +1,11 @@
+let storyForTts = " ";
+
 function parseStory(rawStory) {
-  console.log(rawStory);
   // const random = rawStory.replaceAll(",", " ,").replaceAll(".", " .").split(" ");
-  // console.log (random);
 
   const parsedStory = rawStory.match(
     /[a-zA-Z]+\[v\]|[a-zA-Z]+\[n\]|[a-zA-Z]+\[a\]|[a-zA-Z]+|[,\.]/g
   );
-  // console.log(parsedStory);
 
   const parsedObjectsStory = parsedStory.map((element) => {
     if (element.endsWith("[n]") === true) {
@@ -88,7 +87,7 @@ getRawStory()
       while (madLibsPreview.firstChild) {
         madLibsPreview.removeChild(madLibsPreview.firstChild);
       }
-
+      storyForTts = "";
       array.forEach((word) => {
         if (word.pos) {
           const input = madLibsEdit.querySelector(
@@ -98,19 +97,19 @@ getRawStory()
           span.style.color = "white"
           span.classList.add('preview-animation')
           madLibsPreview.appendChild(span);
+          storyForTts += input.value + " ";
         } else {
           const span = createSpan(word.word);
          
           
           
           madLibsPreview.appendChild(span);
+          storyForTts += word.word + " ";
         }
       });
     }
-
     generateMadLibs(processedStory);
     updatePreview(processedStory);
-
     const inputs = madLibsEdit.querySelectorAll("input");
     inputs.forEach((input) => {
       input.addEventListener("click", () => {
@@ -138,4 +137,18 @@ getRawStory()
 
       }} )
   });
+let speakButton = document.getElementById("speak-button");
+let volumeSlider = document.getElementById("volume");
 
+speakButton.addEventListener("click", function() {
+  let utterance = new SpeechSynthesisUtterance();
+  if (!window.speechSynthesis.speaking) {
+    utterance.text = storyForTts;
+    utterance.voice = window.speechSynthesis.getVoices()[6];
+    utterance.volume = volumeSlider.value;
+    window.speechSynthesis.speak(utterance);
+  } else {
+    window.speechSynthesis.cancel();
+  }
+  
+});
