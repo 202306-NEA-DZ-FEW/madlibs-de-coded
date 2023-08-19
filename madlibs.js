@@ -152,3 +152,14 @@ speakButton.addEventListener("click", function() {
   }
   
 });
+ 
+let play = false;
+speakButton.textContent = "▶"
+
+speakButton.addEventListener("click", function() {
+ if (play === false) {
+  speakButton.textContent = "◼"
+  play = true
+ } else {speakButton.textContent = "▶"
+play = false}
+})
