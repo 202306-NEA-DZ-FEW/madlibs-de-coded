@@ -96,7 +96,7 @@ body {
   background-position: center;
   border-radius: 1em;
   margin-left: 7%;
-  margin-top: 18%;
+  /* margin-top: 18%; */
   min-width: 40%;
   width: 300px;
   background-color: #23e7c6a2;
@@ -140,7 +140,7 @@ input {
   min-width: 10%;
   opacity: 0.8;
   outline: none;
-  box-shadow: 2px 2px 0px 0px #0B2447;
+  box-shadow: 2px 2px 0px 0px #FF0000;
   transition: all 0.5s;
 }
 
@@ -150,7 +150,7 @@ input:focus {
 }
 
 input.has-text {
-  background-color: #0B2447;
+  background-color: #FF0000;
   color: white;
 }
 
@@ -269,17 +269,6 @@ input.has-text {
     color: rgb(0, 0, 0);
   }
 
-  /* 33.33% {
-    color: yellow;
-  } */
-
-  /* 50% {
-    color: green;
-  } */
-
-  /* 50% {
-    color: blue;
-  } */
 
   75% {
     color: rgba(255, 0, 0, 0.415);
