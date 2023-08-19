@@ -3,7 +3,7 @@ previewDiv.style.position = "relative";
 
 const cat = document.createElement("img");
 cat.src = "src/cat.png";
-
+cat.classList.add("cat")
 cat.style.position = "absolute";
 
 const initialLeft = 70; 

@@ -1,0 +1,146 @@
+@media only screen and (max-width: 800px) {
+
+    .cat,
+    .eye,
+    .waves,
+    .footer, .content, .text {
+        display: none;
+    }
+
+    html,
+    body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    @font-face {
+        font-family: 'Seuss';
+        src: url('src/Seuss.woff2') format('woff2'),
+            url('src/Seuss.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-family: 'Seuss';
+        margin: 0;
+    }
+
+
+    body {
+        overflow-x: hidden;
+        background-image: none;
+        background-color: antiquewhite;
+        background-attachment: fixed;
+        background-size: cover;
+        max-height: 100vh;
+        align-items: center;
+        line-height: 1.5em;
+        word-spacing: 0.2em;
+    }
+
+
+
+    .madLibsEdit {
+        background-image: url("src/madlibsedit bg.png");
+        border-radius: 1em;
+        margin-left: 7%;
+        margin-top: 18%;
+        min-width: 40%;
+        width: 100vw;
+        background-color: #23e7c6a2;
+        height: auto;
+        padding: 1%;
+        transition: all 0.5s;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        word-spacing: 0.2em;
+    }
+
+
+
+
+    .madLibsPreview {
+        border-radius: 1em;
+        width: 100vw;
+        margin: 2%;
+        height: auto;
+        padding: 1%;
+        background-color: #23e7c6a2;
+        transition: all 0.5s;
+        font-size: 1.5em;
+    }
+
+    input {
+        padding: 10px;
+        height: 12px;
+        margin-right: 5px;
+        margin-left: 5px;
+        border: 1px solid #0B2447;
+        border-top: none;
+        border-bottom: none;
+        font-size: 20px;
+        max-width: 14%;
+        min-width: 10%;
+        opacity: 0.6;
+        outline: none;
+        box-shadow: 2px 2px 0px 0px #0B2447;
+        transition: all 0.5s;
+    }
+
+    input:focus {
+        box-shadow: none;
+        transition: all 0.5s;
+    }
+
+    input.has-text {
+        background-color: #0B2447;
+        color: white;
+    }
+
+
+
+
+    .waves {
+        display: none;
+    }
+
+    .small-title{
+        color: black;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        text-align: center;
+        font-size: 50px;
+    }
+
+
+
+
+
+}
+
+
+@media only screen and (min-width: 800px) { 
+    .small-title {
+        display: none;
+    }
+}
