@@ -127,7 +127,7 @@ speakButton.addEventListener("click", function () {
   let utterance = new SpeechSynthesisUtterance();
   if (!window.speechSynthesis.speaking) {
     utterance.text = storyForTts;
-    utterance.voice = window.speechSynthesis.getVoices()[6];
+    utterance.voice = window.speechSynthesis.getVoices()[5];
     utterance.volume = volumeSlider.value;
     window.speechSynthesis.speak(utterance);
   } else {
