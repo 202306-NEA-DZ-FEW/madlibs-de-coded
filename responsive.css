@@ -3,7 +3,10 @@
     .cat,
     .eye,
     .waves,
-    .footer, .content, .text {
+    .footer,
+    .content,
+    .text,
+    .volume {
         display: none;
     }
 
@@ -40,10 +43,13 @@
 
 
     body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 32px;
         overflow-x: hidden;
-        background-image: none;
-        background-color: antiquewhite;
-        background-attachment: fixed;
+    
         background-size: cover;
         max-height: 100vh;
         align-items: center;
@@ -54,31 +60,27 @@
 
 
     .madLibsEdit {
+        grid-area: 2 / 1 / 3 / 2;
         background-image: url("src/madlibsedit bg.png");
         border-radius: 1em;
-        margin-left: 7%;
-        margin-top: 18%;
-        min-width: 40%;
         width: 100vw;
-        background-color: #23e7c6a2;
         height: auto;
         padding: 1%;
         transition: all 0.5s;
         font-size: 1.5em;
         line-height: 1.5em;
         word-spacing: 0.2em;
+        margin: 2em;
     }
 
 
-
-
     .madLibsPreview {
+        grid-area: 3 / 1 / 4 / 2;
+        
         border-radius: 1em;
-        width: 100vw;
         margin: 2%;
         height: auto;
         padding: 1%;
-        background-color: #23e7c6a2;
         transition: all 0.5s;
         font-size: 1.5em;
     }
@@ -117,10 +119,11 @@
         display: none;
     }
 
-    .small-title{
+    .small-title {
+        grid-area: 1 / 1 / 2 / 2;
         color: black;
         position: absolute;
-        top: 30%;
+        top: 5vh;
         left: 0;
         right: 0;
         bottom: 0;
@@ -139,8 +142,27 @@
 }
 
 
-@media only screen and (min-width: 800px) { 
+@media only screen and (min-width: 800px) {
     .small-title {
         display: none;
     }
+}
+
+
+
+@media only screen and (max-width: 400px){
+    .volume  {
+        display: none;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;  }
+        .preview {
+            height: 25vh;
+            display: flex;
+            align-items: end;
+            flex-direction: column;
+            margin-bottom: 5%;
+        }
 }
