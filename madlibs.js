@@ -100,7 +100,7 @@ getRawStory()
     inputs.forEach((input) => {
       input.addEventListener("click", () => {
         document.documentElement.scrollTo({
-          top: document.documentElement.scrollHeight * 0.30,
+          top: document.documentElement.scrollHeight * 0.18,
           behavior: "smooth"
         });
       });
@@ -128,7 +128,7 @@ speakButton.addEventListener("click", function () {
   let utterance = new SpeechSynthesisUtterance();
   if (!window.speechSynthesis.speaking) {
     utterance.text = storyForTts;
-    utterance.voice = window.speechSynthesis.getVoices()[5];
+    utterance.voice = window.speechSynthesis.getVoices()[4];
     utterance.volume = volumeSlider.value;
     window.speechSynthesis.speak(utterance);
   } else {

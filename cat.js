@@ -1,3 +1,5 @@
+
+
 // Get a reference to the preview div element and set its position to relative.
 const previewDiv = document.querySelector('.preview');
 previewDiv.style.position = "relative";
@@ -16,7 +18,6 @@ const initialTop = -5;
 cat.style.left = `${initialLeft}vw`;
 cat.style.top = `${initialTop}vh`;
 cat.style.transform = "translate(-50%, -50%)";
-cat.style.zIndex = "-1";
 cat.style.width = "25vw";
 cat.style.height = "52vh";
 
@@ -57,6 +58,12 @@ rightEye.classList.add("eye");
 // Append the eye image elements to the preview div.
 previewDiv.appendChild(leftEye);
 previewDiv.appendChild(rightEye);
+
+madLibsPreview.style.zIndex = 3
+cat.style.zIndex = 2
+leftEye.style.zIndex = 3
+rightEye.style.zIndex = 3
+
 
 // Add event listener for Enter key press to animate the cat's position and eyes.
 document.addEventListener("keydown", (event) => {
@@ -125,6 +132,7 @@ document.addEventListener("mousemove", (event) => {
         eye.style.transform = `rotate(${angleDeg}deg)`;
     });
 });
+
 
 // Add event listener for mouseover to animate the cat's position and eyes.
 cat.addEventListener("mouseover", () => {
