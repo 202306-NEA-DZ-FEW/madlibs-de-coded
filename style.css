@@ -281,7 +281,6 @@ input.has-text {
 .preview {
     height: 25vh;
     display: flex;
-    /* justify-content: center; */
     align-items: end;
     flex-direction: column-reverse;
 }
