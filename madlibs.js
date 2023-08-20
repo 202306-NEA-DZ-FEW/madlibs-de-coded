@@ -88,3 +88,4 @@ getRawStory()
     generateMadLibs(processedStory);
     updatePreview(processedStory);
   });
+  const reset = document.querySelector(".reset");
