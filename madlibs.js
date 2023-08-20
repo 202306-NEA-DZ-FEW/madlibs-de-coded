@@ -36,7 +36,7 @@ getRawStory()
       input.setAttribute("data-index", index);
 
       input.placeholder = defaultValue || "___";
-      input.maxLength = 20;
+      input.maxLength = 30;
       // input.value = "";
       input.addEventListener("input", () => updatePreview(processedStory));
       return input;
