@@ -39,6 +39,7 @@ getRawStory()
       const input = document.createElement("input");
       input.setAttribute("data-index", index);
       input.placeholder = defaultValue || "___";
+
       input.maxLength = 20;
       input.addEventListener("input", () => {
         input.value.trim() !== "" ? input.classList.add("has-text") : input.classList.remove("has-text");
