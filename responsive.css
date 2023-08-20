@@ -10,14 +10,29 @@
         display: none;
     }
 
-    html,
-    body {
-        display: grid;
-        place-items: center;
-        height: 100vh;
-        margin: 0;
+    main {
+        display: flex;
+        flex-direction: column;
+
     }
 
+    .madLibsEdit {
+        background-image: url("src/madlibsedit bg.png");
+        border-radius: 1em;
+        width: auto;
+        height: auto;
+        padding: 1%;
+        transition: all 0.5s;
+        margin: auto;
+    }
+
+    .preview {
+        margin-top: 10%;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
     @font-face {
         font-family: 'Seuss';
         src: url('src/Seuss.woff2') format('woff2'),
@@ -27,142 +42,96 @@
         font-display: swap;
     }
 
-
-    html,
     body {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        background-image: url("src/background.jpg");
+        display: flex;
+        flex-direction: column;
         font-family: 'Seuss';
-        margin: 0;
     }
 
 
-    body {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 32px;
-        overflow-x: hidden;
-    
-        background-size: cover;
-        max-height: 100vh;
-        align-items: center;
-        line-height: 1.5em;
-        word-spacing: 0.2em;
+    #inner-wrap,
+    .waves,
+    .text,
+    #page-wrap,
+    .footer,
+    .content,
+    #google_translate_element {
+        display: none;
     }
 
+
+
+
+
+    .main {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+    }
 
 
     .madLibsEdit {
-        grid-area: 2 / 1 / 3 / 2;
-        background-image: url("src/madlibsedit bg.png");
-        border-radius: 1em;
-        width: 100vw;
-        height: auto;
-        padding: 1%;
-        transition: all 0.5s;
-        font-size: 1.5em;
-        line-height: 1.5em;
-        word-spacing: 0.2em;
-        margin: 2em;
+
+        width: 100%;
+
     }
+
+
+    .preview {
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    button {
+        width: 6em;
+        border-radius: 1em;
+        order: 3;
+        --button-color: #222;
+    }
+
 
 
     .madLibsPreview {
-        grid-area: 3 / 1 / 4 / 2;
-        
+        background-image: url("src/madlibspreview bg.jpg");
+        background-position: center;
         border-radius: 1em;
-        margin: 2%;
+        width: 90%;
+        margin-top: 1%;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.383);
         height: auto;
-        padding: 1%;
+        padding: 5px 2% 12px 2%;
+        background-color: #e70f0fa2;
         transition: all 0.5s;
         font-size: 1.5em;
     }
 
-    input {
-        padding: 10px;
-        height: 12px;
-        margin-right: 5px;
-        margin-left: 5px;
-        border: 1px solid #0B2447;
-        border-top: none;
-        border-bottom: none;
-        font-size: 20px;
-        max-width: 14%;
-        min-width: 10%;
-        opacity: 0.6;
-        outline: none;
-        box-shadow: 2px 2px 0px 0px #0B2447;
-        transition: all 0.5s;
-    }
-
-    input:focus {
-        box-shadow: none;
-        transition: all 0.5s;
-    }
-
-    input.has-text {
-        background-color: #0B2447;
-        color: white;
-    }
-
-
-
-
-    .waves {
-        display: none;
-    }
-
-    .small-title {
-        grid-area: 1 / 1 / 2 / 2;
-        color: black;
-        position: absolute;
-        top: 5vh;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        margin: auto;
-        text-align: center;
-        font-size: 50px;
-    }
-
-
-
-
-
-}
-
-
-@media only screen and (min-width: 800px) {
-    .small-title {
-        display: none;
-    }
 }
 
 
 
-@media only screen and (max-width: 400px){
-    .volume  {
+
+
+@media only screen and (max-width: 400px) {
+    .volume {
         display: none;
     }
+
     body {
         display: flex;
         flex-direction: column;
-        align-items: space-between;  }
-        .preview {
-            height: 25vh;
-            display: flex;
-            align-items: end;
-            flex-direction: column;
-            margin-bottom: 5%;
-        }
+        align-items: space-between;
+    }
+
+    .preview {
+        height: 25vh;
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        margin-bottom: 5%;
+    }
 }

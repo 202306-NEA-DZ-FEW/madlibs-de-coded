@@ -100,7 +100,7 @@ getRawStory()
     inputs.forEach((input) => {
       input.addEventListener("click", () => {
         document.documentElement.scrollTo({
-          top: document.documentElement.scrollHeight * 0.30,
+          top: document.documentElement.scrollHeight * 0.18,
           behavior: "smooth"
         });
       });
