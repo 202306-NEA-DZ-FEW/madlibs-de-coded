@@ -9,7 +9,7 @@ De:Coded is a web application that presents the "Story of the Mischievous" using
 - [Getting Started](#getting-started)
 - [Dependencies](#dependencies)
 - [Contributors](#contributors)
-- [License](#license)
+
 
 ## Description
 
