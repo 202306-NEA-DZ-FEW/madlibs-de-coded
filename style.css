@@ -15,6 +15,7 @@ body {
   font-family: 'Seuss';
   height: 100vh;
   width: 100%;
+  margin: 0;
 }
 
 
@@ -104,6 +105,7 @@ body {
   font-size: 1.5em;
   line-height: 1.5em;
   word-spacing: 0.2em;
+  margin-left: 1em;
 }
 
 
