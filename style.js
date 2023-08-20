@@ -14,3 +14,8 @@ for (let i = 0; i < 32; i++) {
     document.querySelector(".bubbles").appendChild(bubble);
   }
   
+
+  const loader = document.getElementById("preload");
+  window.addEventListener("load", function(){
+    loader.style.display = "none";
+  })
