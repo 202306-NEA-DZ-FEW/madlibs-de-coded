@@ -1,72 +1,85 @@
-# Re:Coded Mad Libz
+# De:Coded
 
-## What is Mad Libs? 
-See [wikipedia](https://en.wikipedia.org/wiki/Mad_Libs). Yes, I know this section is short, do not skip this, **please read what Mad Libs is or the rest of this will make no sense**. In normal mad libs, you usually just insert the word, but in this version, it's more like a "fill in the blank" of an existing story.
+De:Coded is a web application that presents the "Story of the Mischievous" using interactive elements and dynamic styling. This README provides an overview of the project structure, components, and how to set up the project on your local machine.
 
-## Instructions
-
-### Collaboration requirements
-Please don't split the code. Write every line of code together. In each group, every person should understand every line of code. See [pair programming](Pair_programming).
-
-### Write a story
-
-In `story.txt`, you'll find a brief story **that you need to replace with your own**. By the way, for the purposes of [parsing](https://en.wikipedia.org/wiki/Parsing), you're only allowed to use periods and commas as grammar.
-
-Confusingly, you should write out the full story, although the "blanks" will be anywhere a grammar part is denoted. The reason for this will be apparent later in some of the extra challenges.
-
-For example:
-* `Louis[n]`: normally it says Louis, but the user should replace it with a *noun*
-* `went[v]`: normally it says went, but the user should replace it with a *verb*
-* `[a]` for adjective...
-
-Note that when you write a story, the period and commas should go after the part of speech, e.g., `Louis[n].` (NOT `Louis.[n]`).
-
-### Code
-
-In this project, you will be using HTML, CSS, and JS in unison in order to create a variant of a Mad Libs game with the story of your choice. 
-
-Below, we discuss the requirements. We use the word "input" to refer to the blanks in the Mad Libs story.
-
-Here is a very, very simple visual example of what it might look like; however, all styling is at your liberty in this project.
-
-### Barebones Example
-![Example](https://i.imgur.com/ZRNvFC7.png)
-
-#### Functional requirements
-
-0. **Parsing the story:** I've already written some code for you that reads in the file `story.txt` into a string. However, you need to process it into a format that will allow you to keep track of "blanks." See `madlibs.js` for further instructions. You will likely want to [read about regular expressions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/) (yes, this is extra expected reading :) ). It's possible, but annoying, to do this without regular expressions.
-
-1. **Showing the story:** It should show **two copies** of the story. In one copy ("edit view"),
-all words in the story with blanks (e.g., `Louis[n]`, `went[v]`, ...) are replaced with inputs. This should be in `div.madLibsEdit`. In the second copy ("preview"), it should show the same story, but formatted prettily (without the blanks!). Refer to the example picture above.
-
-2. **Hotkeys:** When the user presses `Enter` in an input, it should move the cursor to the next input in the story.
-
-3. **Constraining user inputs:** An input should be allowed to have a maximum of 20 characters.
-
-4. **Live update:** Whenever the user updates a blank in the edit view, it should update the preview any time a new character is typed (hint: this is handling an event of sorts). The user should **not** have to click a button in order to update the preview.
-
-5. **Story length:** Your story should have at least 10 blanks.
-
-#### Styling requirements
-
-0. **Responsiveness**: When the screen is small, the story should take the full width of the screen. When the screen is larger, as on a computer. Values "small" and "large" are up to you to decide.
-
-1. **Flexbox**: Use at least one flexbox.
-
-2. **Highlighting currently focused input**: There should be three possible styles of inputs (style is a vague word here, they just need to be distinguishable to the user):
-* currently highlighted input (if the user is typing in one)
-* filled out input (the user has already put a word there -- might require JS here ;) )
-* empty input (the user has not already put a word there).
+## Table of Contents
+- [Description](#description)
+- [Features Included](#features-included)
+- [Preview](#preview)
+- [Getting Started](#getting-started)
+- [Dependencies](#dependencies)
+- [Contributors](#contributors)
 
 
-## Presentation
-Your demo will be 10 minutes. We will time it. It's not meant to be a high pressure situation but we want to make sure that everyone has time to demo in the allocated time.
+## Description
 
-## Requirements
-Please read these instructions and prepare some thoughts on these for your demo.
+De:Coded is a storytelling web application that features an interactive story presented with visually appealing animations, custom fonts, and dynamic user interfaces. The application showcases the implementation of HTML, CSS, and JavaScript to create an engaging user experience.
 
-* Show us your story and your work. We will go through this quickly, the idea is that the chat will just suggest words and parts of speech while you type them, then we will take a screenshot that we can save as part of our class archives.
-* Each member will speak briefly about one part of the code, maximum of 1 minute per person. Remember the requirement that every member must be able to to explain any part of the code. Please think about what you want to say beforehand, usually people make it up as they go and it takes too long. I will cut you off if it goes longer than a minute, for the sake of having everyone present.
-* What were the three hardest problems that you faced? One person answers this.
-* Reflection: all of the members must speak about what stood out to them about their learnings from the project. It can be abstract ("I learned how to better find my mistakes") or concrete ("I learned more about the DOM.").
-* Reflection: what do you think is the difference between working on a project and working on small exercises?
+## Features Included
+
+- **Custom Font: Seuss**
+  The application utilizes a custom font called "Seuss," which is loaded using the @font-face CSS rule. This distinctive font enhances the visual style of the story presentation, giving it a unique and playful feel.
+
+- **Dynamic Background Waves**
+  The header section of the application features dynamic background waves created using SVG graphics and CSS animations. These waves contribute to the overall visual aesthetic and add a sense of motion to the page.
+
+- **Interactive Mad Libs**
+  The application includes an interactive "Mad Libs" section that allows users to input their own words to complete a story template. The user inputs are presented in a styled container, creating an engaging and playful storytelling experience.
+
+- **Story Preview**
+  The "Story Preview" section showcases the completed story with the user's inputted words. This section is designed with a background image and styling that complements the storytelling theme.
+
+- **Interactive Cat Animation**
+  A playful and interactive cat animation is integrated into the application. Users can interact with the cat by pressing the "Enter" key or hovering the mouse over the cat. The cat's position and eyes animate in response to these interactions, adding an element of fun and engagement to the experience.
+
+- **Volume Control**
+  A volume control slider is provided, allowing users to adjust the volume of an audio feature, although the implementation details for the audio are not present in the provided code.
+
+- **Contributors' Information**
+  The application acknowledges the contributors who worked on the project by displaying their names with a preview animation. This adds a personal touch and highlights the collaborative effort behind the project.
+
+- **Responsive Design**
+  Although not explicitly mentioned in the provided code, it's important to note that responsive design principles should be applied to ensure the application is usable across various screen sizes and devices.
+
+- **Background Image and Styling**
+  The application employs background images and styling to enhance the visual appeal of the content. The use of background images helps create a cohesive and engaging visual narrative.
+
+## Preview
+
+![image](https://github.com/202306-NEA-DZ-FEW/madlibs-de-coded/assets/62702326/7dfd94d3-b51e-4413-93b0-71af57bb92e4)
+
+## Getting Started
+
+To run the De:Coded project on your local machine, follow these steps:
+
+1. Clone the repository:
+
+```
+git clone https://github.com/your-username/decoded.git
+```  
+
+2. Navigate to the project directory:
+
+```
+cd decoded
+```
+
+
+3. Open the `index.html` file in a web browser to view the application.
+
+## Dependencies
+
+The De:Coded project uses the following dependencies:
+
+- Fonts: Seuss (Provided as WOFF and WOFF2 files)
+- Images: background.jpg, madlibsedit bg.png, madlibspreview bg.jpg
+
+## Contributors
+
+- Ahmed (@Bolphunga)
+- Sidali (@HabchiSidAli)
+- Oussama (@0m3ga13)
+- Bouchra (@Bushra369)
+- Hadil (@Hadil)
+
+
