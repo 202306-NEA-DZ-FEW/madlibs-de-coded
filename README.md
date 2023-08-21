@@ -46,7 +46,7 @@ De:Coded is a storytelling web application that features an interactive story pr
 
 ## Preview
 
-Insert a screenshot or GIF demonstrating the visual appearance of your application here.
+![image](https://github.com/202306-NEA-DZ-FEW/madlibs-de-coded/assets/62702326/7dfd94d3-b51e-4413-93b0-71af57bb92e4)
 
 ## Getting Started
 
